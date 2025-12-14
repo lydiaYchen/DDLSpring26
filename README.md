@@ -9,7 +9,6 @@
   - [5.2. Group projects](#52-group-projects)
 - [6. Detailed schedule](#6-detailed-schedule)
   - [All assignments are due before the lecture/lab day of the noted week.](#all-assignments-are-due-before-the-lecturelab-day-of-the-noted-week)
-  - [All assignments are due before the lecture/lab day of the noted week.](#all-assignments-are-due-before-the-lecturelab-day-of-the-noted-week-1)
 
 This repository contains the materials of the MSc course on **Distributed Deep Learning Systems** course running in Spring 2026 at UniNE.
 
@@ -79,26 +78,24 @@ For the final step, teams must submit a written report and give a 20-minute pres
 
 
 
-### All assignments are due before the lecture/lab day of the noted week.
 
-
-| Week             | Lecture Topic                       | Lab Topic                | Assignment Due           |
-|:-----------------|:------------------------------------|:-------------------------|:-------------------------|
-| Week 1 (Feb 16)  | Deep Learning     |  SGD Lab*                 |                          |
-| Week 2 (Feb 23)  | Distributed Learning  |    Data & Model Parallelism        |                          |
-| Week 3 (Mar 2)   | Memory and Acceleration Technology   |  Horizontal FL  |                          |
-| Week 4 (Mar 9)  | Horizontal Federated Learning     |             Q/A       |     HW1
-| Week 5 (Mar 16)  | Vertical Federated Learning| VFL  |         Project proposal           |
-| Week 6 (Mar 23)  | Federated Generative AI             |VGI          |        |
-| Week 7 (Mar 30)  | Decentralized RL        | Decentralized RL          |                          |
-| Week 8 (Apr 6)   | No Lecture          | No Lab               |                    |
-| Week 9 (Apr 13)  | Robust Distributed Learning           |Q/A              | HW  2     |
-| Week 10 (Apr 20) | Attacks and Defenses I                      |      Attack/Defense           |     Project midterm                     |
-| Week 11 (Apr 27) | Attacks and Defenses II             |      Attack/Defense                 |                          |
-| Week 12 (May 4)  | Privacy Enhancing Technology        | DP              |                   |
-| Week 13 (May 11) |  Distributed Inference             | Q/A  |         HW3                 |
-| Week 14 (May 18) | Final presentation             |                  |           End-term               |
-| Week 15 (May 25) | White Monday             | White Monday            |       |
+| Week             | Lecture Topic                          | Lab Topic      | Quiz / Project.    |
+|:-----------------|:---------------------------------------|:---------------|:-------------------|
+| Week 1 (Feb 17)  | Deep Learning                          |                |                    |
+| Week 2 (Feb 24)  | Distributed Learning                   |  SGD           |                    |
+| Week 3 (Mar 3)   | Memory and Acceleration Technology     |Parallelism     |                    |
+| Week 4 (Mar 10)   | Horizontal Federated Learning          | HFL                |                    |
+| Week 5 (Mar 17)  | Vertical Federated Learning            | Quiz             | Project Proposal   |
+| Week 6 (Mar 24)  | Federated Generative AI                |VFL               |                    |
+| Week 7 (Mar 31)  | Decentralized RL                       | VGI |             |
+| Week 8 (Apr 7)   | No Lecture                             | No Lab            |                    |
+| Week 9 (Apr 14)  | Robust Distributed Learning            | Decentralize RL   |                    |
+| Week 10 (Apr 21) | Project Midterm                        | Quiz                |     Project midterm  |
+| Week 11 (Apr 28) | Attacks and Defenses I                 | Inference Attack    |                    |
+| Week 12 (May 5)  | Attacks and Defenses II                | Training Attack       |                   | 
+| Week 13 (May 12) | Privacy-Enhancing Technologies         |DP                      |
+| Week 14 (May 19) | Distributed Inference                   |    Quiz             | End-term           |
+| Week 15 (May 26) | Final Presentation                   |                                  |                    |
 
 
 
