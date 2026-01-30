@@ -1,5 +1,3 @@
-
-
 - [1. Important links](#1-important-links)
 - [2. Course description](#2-course-description)
 - [3. Learning objectives](#3-learning-objectives)
@@ -47,9 +45,9 @@ The grade of this course is determined through three components:
 
 1. Lab assignment (30%): 3 individual lab assignments, due in weeks 4, 7, 11.
 2. Group project (70%): group project report (60%) and presentation (10%). The goal is to reproduce a paper and propose an algorithm to extend the paper.
-   - There is an initial proposal in week 5
-   - The interim discussion with each team is held in week 9
-   - The final report and a 20-minute presentation is due in week 15 (the last one)
+   * There is an initial proposal in week 5
+   * The interim discussion with each team is held in week 9
+   * The final report and a 20-minute presentation is due in week 15 (the last one)
 
 **All assessment items (homework assignments; project report) must be submitted via ILIAS.**
 
@@ -76,26 +74,23 @@ For the final step, teams must submit a written report and give a 20-minute pres
 
 ### All assignments are due before the lecture/lab day of the noted week.
 
-
-
-
-| Week             | Lecture Topic                          | Lab Topic      | Quiz / Project.    |
-|:-----------------|:---------------------------------------|:---------------|:-------------------|
-| Week 1 (Feb 17)  | Deep Learning                          |                |                    |
-| Week 2 (Feb 24)  | Distributed Learning                   |  SGD           |                    |
-| Week 3 (Mar 3)   | Memory and Acceleration Technology     |Parallelism     |                    |
-| Week 4 (Mar 10)   | Horizontal Federated Learning          | HFL                |                    |
-| Week 5 (Mar 17)  | Vertical Federated Learning            | Quiz             | Project Proposal   |
-| Week 6 (Mar 24)  | Federated Generative AI                |VFL               |                    |
-| Week 7 (Mar 31)  | Decentralized RL                       | VGI |             |
-| Week 8 (Apr 7)   | No Lecture                             | No Lab            |                    |
-| Week 9 (Apr 14)  | Robust Distributed Learning            | Decentralize RL   |                    |
-| Week 10 (Apr 21) | Project Midterm                        | Quiz                |     Project midterm  |
-| Week 11 (Apr 28) | Attacks and Defenses I                 | Inference Attack    |                    |
-| Week 12 (May 5)  | Attacks and Defenses II                | Training Attack       |                   | 
-| Week 13 (May 12) | Privacy-Enhancing Technologies         |DP                      |
-| Week 14 (May 19) | Distributed Inference                   |    Quiz             | End-term           |
-| Week 15 (May 26) | Final Presentation                   |                                  |                    |
+| Week             | Lecture Topic                      | Lab Topic        | Quiz / Project.  |
+|:-----------------|:-----------------------------------|:-----------------|:-----------------|
+| Week 1 (Feb 17)  | Deep Learning                      |                  |                  |
+| Week 2 (Feb 24)  | Distributed Learning               | SGD              |                  |
+| Week 3 (Mar 3)   | Memory and Acceleration Technology | Parallelism      |                  |
+| Week 4 (Mar 10)  | Horizontal Federated Learning      | HFL              |                  |
+| Week 5 (Mar 17)  | Vertical Federated Learning        | HW Lab           | Project Proposal |
+| Week 6 (Mar 24)  | Federated Generative AI            | VFL              |                  |
+| Week 7 (Mar 31)  | Decentralized RL                   | VGI              |                  |
+| Week 8 (Apr 7)   | No Lecture                         | No Lab           |                  |
+| Week 9 (Apr 14)  | Robust Distributed Learning        | Decentralize RL  |                  |
+| Week 10 (Apr 21) | Project Midterm                    | HW Lab           | Project midterm  |
+| Week 11 (Apr 28) | Attacks and Defenses I             | Inference Attack |                  |
+| Week 12 (May 5)  | Attacks and Defenses II            | Training Attack  |                  | 
+| Week 13 (May 12) | Privacy-Enhancing Technologies     | DP               |                  |
+| Week 14 (May 19) | Distributed Inference              | HW Lab           | End-term         |
+| Week 15 (May 26) | Final Presentation                 |                  |                  |
 
 
 
