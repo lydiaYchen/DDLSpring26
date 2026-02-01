@@ -53,9 +53,9 @@ The grade of this course is determined through three components:
 
 ### 5.1. Homework
 
-- Homework 1: due in week 4
-- Homework 2: due in week 8
-- Homework 3: due in week 12
+- Homework 1: due in week 5
+- Homework 2: due in week 9
+- Homework 3: due in week 14
 
 Submissions after the grace period are not considered, and students will have the corresponding 10% of their final grade set as 0.
 
@@ -64,7 +64,7 @@ Submissions after the grace period are not considered, and students will have th
 The objective is to reproduce and improve the performance of a paper from the course list. The students must hand in a final project report in the style of a short scientific paper, stating each team member's contribution to the overall system performance. There are four milestones associated with this project. See the [project description](project.md) for more information.
 
 - Group size: 1-2 students
-- Schedule: initial proposal (week 5), interim meeting (week 9), report (week 14), and presentation/interview (week 15).
+- Schedule: initial proposal (week 6, interim meeting (week 10), report (week 15), and presentation/interview (week 15).
 
 For the initial proposal, teams must submit a 1-page plan, and they will receive written feedback.
 For the interim meeting, teams must submit and give a presentation on their progress, for which they will receive oral feedback.
@@ -80,16 +80,16 @@ For the final step, teams must submit a written report and give a 20-minute pres
 | Week 2 (Feb 24)  | Distributed Learning               | SGD              |                  |
 | Week 3 (Mar 3)   | Memory and Acceleration Technology | Parallelism      |                  |
 | Week 4 (Mar 10)  | Horizontal Federated Learning      | HFL              |                  |
-| Week 5 (Mar 17)  | Vertical Federated Learning        | HW Lab           | Project Proposal |
-| Week 6 (Mar 24)  | Federated Generative AI            | VFL              |                  |
+| Week 5 (Mar 17)  | Vertical Federated Learning        | HW Lab           | HW1
+| Week 6 (Mar 24)  | Federated Generative AI            | VFL              | Project Proposal |
 | Week 7 (Mar 31)  | Decentralized RL                   | VGI              |                  |
 | Week 8 (Apr 7)   | No Lecture                         | No Lab           |                  |
-| Week 9 (Apr 14)  | Robust Distributed Learning        | Decentralize RL  |                  |
-| Week 10 (Apr 21) | Project Midterm                    | HW Lab           | Project midterm  |
+| Week 9 (Apr 14)  | Robust Distributed Learning        | Decentralize RL  | HW2              |
+| Week 10 (Apr 21) | Project Midterm                    | Project Midterm  | Project midterm  |
 | Week 11 (Apr 28) | Attacks and Defenses I             | Inference Attack |                  |
 | Week 12 (May 5)  | Attacks and Defenses II            | Training Attack  |                  | 
 | Week 13 (May 12) | Privacy-Enhancing Technologies     | DP               |                  |
-| Week 14 (May 19) | Distributed Inference              | HW Lab           | End-term         |
+| Week 14 (May 19) | Distributed Inference              | HW Lab           | HW3              |
 | Week 15 (May 26) | Final Presentation                 |                  |                  |
 
 
