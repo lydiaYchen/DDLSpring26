@@ -12,10 +12,10 @@ We provide you Pytorch-based of distributed/decentralized framework: You can fin
 
 Milestones:
 
-1. **Project proposal** (mandatory, but ungraded - you will receive feedback): due on week 5
-2. **Intermediate project meeting** (mandatory, but ungraded - you will receive feedback): due on week 9
-3. **Final project report** (mandatory, graded): due on week 14
-4. **20 min project presentation** (mandatory, graded): due on week 14
+1. **Project proposal** (mandatory, but ungraded - you will receive feedback): due on week 6
+2. **Intermediate project meeting** (mandatory, but ungraded - you will receive feedback): due on week 10
+3. **Final project report** (mandatory, graded): due on week 15
+4. **20 min project presentation** (mandatory, graded): due on week 15
 
 All the documents need to be submitted via the ILISAS. Exact due dates are on the ILIAS.
 
