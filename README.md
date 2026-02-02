@@ -72,27 +72,22 @@ For the final step, teams must submit a written report and give a 20-minute pres
 
 ## 6. Detailed schedule
 
-### All assignments are due before the lecture/lab day of the noted week.
+### All deadlines are due **the day before the lecture/lab of the noted week**.
 
-| Week             | Lecture Topic                      | Lab Topic        | Quiz / Project.  |
-|:-----------------|:-----------------------------------|:-----------------|:-----------------|
-| Week 1 (Feb 17)  | Introduction + Deep Learning       | SGD              |                  |
-| Week 2 (Feb 24)  | Distributed Learning               | HFL              |                  |
-| Week 3 (Mar 3)   | Horizontal Federated Learning      | Parallelism      |                  |
-| Week 4 (Mar 10)  | Memory and Acceleration Technology | HW 1 Q&A         |                  |
-| Week 5 (Mar 17)  | Vertical Federated Learning        | VFL              | HW1              |
-| Week 6 (Mar 24)  | Federated Generative AI            | VGI              | Project Proposal |
-| Week 7 (Mar 31)  | Decentralized RL                   | HW2 Q&A          |                  |
-| Week 8 (Apr 7)   | No Lecture                         | No Lab           | Easter           |
-| Week 9 (Apr 14)  | Robust Distributed Learning        | ---------------- | HW2              |
-| Week 10 (Apr 21) | Project Midterm                    | Project Midterm  | Project midterm  |
-| Week 11 (Apr 28) | Attacks and Defenses I             | Inference Attack |                  |
-| Week 12 (May 5)  | Attacks and Defenses II            | Training Attack  |                  | 
-| Week 13 (May 12) | Privacy-Enhancing Technologies     | DP               |                  |
-| Week 14 (May 19) | Distributed Inference              | HW3 Q&A          | HW3              |
-| Week 15 (May 26) | Final Presentation                 |                  |                  |
-
-
-
-
-
+| Week             | Lecture Topic                      | Lab Topic        | Deadline               |
+|:-----------------|:-----------------------------------|:-----------------|:-----------------------|
+| Week 1 (Feb 17)  | Introduction + Deep Learning       | SGD              |                        |
+| Week 2 (Feb 24)  | Distributed Learning               | HFL              |                        |
+| Week 3 (Mar 3)   | Horizontal Federated Learning      | Parallelism      |                        |
+| Week 4 (Mar 10)  | Memory and Acceleration Technology | HW 1 Q&A         |                        |
+| Week 5 (Mar 17)  | Vertical Federated Learning        | VFL              | HW 1                   |
+| Week 6 (Mar 24)  | Federated Generative AI            | VGI              | Project Proposal       |
+| Week 7 (Mar 31)  | Decentralized RL                   | Decentralized RL |                        |
+| Week 8: *Easter* | *No Lecture*                       | *No Lab*         |                        |
+| Week 9 (Apr 14)  | Robust Distributed Learning        | HW 2 Q&A         |                        |
+| Week 10 (Apr 21) | Project Midterm                    | Project Midterm  | HW 2 + Project Midterm |
+| Week 11 (Apr 28) | Attacks and Defenses I             | Inference Attack |                        |
+| Week 12 (May 5)  | Attacks and Defenses II            | Training Attack  |                        |
+| Week 13 (May 12) | Privacy-Enhancing Technologies     | DP               |                        |
+| Week 14 (May 19) | Distributed Inference              | HW 3 Q&A         |                        |
+| Week 15 (May 26) | Final Presentation                 |                  | HW 3 + Project Endterm |
