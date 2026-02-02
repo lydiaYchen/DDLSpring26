@@ -76,21 +76,23 @@ For the final step, teams must submit a written report and give a 20-minute pres
 
 | Week             | Lecture Topic                      | Lab Topic        | Quiz / Project.  |
 |:-----------------|:-----------------------------------|:-----------------|:-----------------|
-| Week 1 (Feb 17)  | Deep Learning                      |                  |                  |
-| Week 2 (Feb 24)  | Distributed Learning               | SGD              |                  |
-| Week 3 (Mar 3)   | Memory and Acceleration Technology | Parallelism      |                  |
-| Week 4 (Mar 10)  | Horizontal Federated Learning      | HFL              |                  |
-| Week 5 (Mar 17)  | Vertical Federated Learning        | HW Lab           | HW1
-| Week 6 (Mar 24)  | Federated Generative AI            | VFL              | Project Proposal |
-| Week 7 (Mar 31)  | Decentralized RL                   | VGI              |                  |
-| Week 8 (Apr 7)   | No Lecture                         | No Lab           |                  |
-| Week 9 (Apr 14)  | Robust Distributed Learning        | Decentralize RL  | HW2              |
+| Week 1 (Feb 17)  | Introduction + Deep Learning       | SGD              |                  |
+| Week 2 (Feb 24)  | Distributed Learning               | HFL              |                  |
+| Week 3 (Mar 3)   | Horizontal Federated Learning      | Parallelism      |                  |
+| Week 4 (Mar 10)  | Memory and Acceleration Technology | HW 1 Q&A         |                  |
+| Week 5 (Mar 17)  | Vertical Federated Learning        | VFL              | HW1              |
+| Week 6 (Mar 24)  | Federated Generative AI            | VGI              | Project Proposal |
+| Week 7 (Mar 31)  | Decentralized RL                   | HW2 Q&A          |                  |
+| Week 8 (Apr 7)   | No Lecture                         | No Lab           | Easter           |
+| Week 9 (Apr 14)  | Robust Distributed Learning        | ---------------- | HW2              |
 | Week 10 (Apr 21) | Project Midterm                    | Project Midterm  | Project midterm  |
 | Week 11 (Apr 28) | Attacks and Defenses I             | Inference Attack |                  |
 | Week 12 (May 5)  | Attacks and Defenses II            | Training Attack  |                  | 
 | Week 13 (May 12) | Privacy-Enhancing Technologies     | DP               |                  |
-| Week 14 (May 19) | Distributed Inference              | HW Lab           | HW3              |
+| Week 14 (May 19) | Distributed Inference              | HW3 Q&A          | HW3              |
 | Week 15 (May 26) | Final Presentation                 |                  |                  |
+
+
 
 
 
