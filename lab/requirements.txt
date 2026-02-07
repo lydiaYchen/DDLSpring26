@@ -1,0 +1,11 @@
+jupyterlab==4.3.5
+numpy==2.1.3
+pandas==2.2.3
+scikit-learn==1.5.1
+seaborn==0.13.2
+torch==2.5.1
+torchvision==0.20.1
+tqdm==4.66.6
+git+https://github.com/NikolayBlagoev/simplellm.git
+transformers==4.47.1
+-e .
