@@ -1,6 +1,8 @@
-# Distributed Machine Learning LAB
+# Lab 1: Parallelism
 
-This repo hosts all relevant files about the distributed ML Lab in Neuchatel.
+This lab presents common paradigms for distributed training of deep learning models, via the running example of a small language model.
+The README presents the different techniques, while the complete code scripts are in the various subdirectories.
+Before running any of the code, make sure to follow the overall lab setup.
 
 ## Building LLMs
 

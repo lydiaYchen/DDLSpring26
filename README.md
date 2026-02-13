@@ -43,10 +43,10 @@ Lydia is the responsible instructor for this course and can be reached at **lydi
 
 The grade of this course is determined through three components:
 
-1. Lab assignment (30%): 3 individual lab assignments, due in weeks 4, 7, 11.
+1. Lab assignment (30%): 3 individual lab assignments, due at the beginning of weeks 5, 10, 15.
 2. Group project (70%): group project report (60%) and presentation (10%). The goal is to reproduce a paper and propose an algorithm to extend the paper.
-   * There is an initial proposal in week 5
-   * The interim discussion with each team is held in week 9
+   * There is an initial proposal in week 6
+   * The interim discussion with each team is held in week 10
    * The final report and a 20-minute presentation is due in week 15 (the last one)
 
 **All assessment items (homework assignments; project report) must be submitted via ILIAS.**
@@ -54,8 +54,8 @@ The grade of this course is determined through three components:
 ### 5.1. Homework
 
 - Homework 1: due in week 5
-- Homework 2: due in week 9
-- Homework 3: due in week 14
+- Homework 2: due in week 10
+- Homework 3: due in week 15
 
 Submissions after the grace period are not considered, and students will have the corresponding 10% of their final grade set as 0.
 
@@ -64,7 +64,7 @@ Submissions after the grace period are not considered, and students will have th
 The objective is to reproduce and improve the performance of a paper from the course list. The students must hand in a final project report in the style of a short scientific paper, stating each team member's contribution to the overall system performance. There are four milestones associated with this project. See the [project description](project.md) for more information.
 
 - Group size: 1-2 students
-- Schedule: initial proposal (week 6, interim meeting (week 10), report (week 15), and presentation/interview (week 15).
+- Schedule: initial proposal (week 6), interim meeting (week 10), and report + presentation/interview (week 15).
 
 For the initial proposal, teams must submit a 1-page plan, and they will receive written feedback.
 For the interim meeting, teams must submit and give a presentation on their progress, for which they will receive oral feedback.
