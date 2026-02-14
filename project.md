@@ -59,14 +59,14 @@ The 20 minute interviews per group will be scheduled on the last lecture.
 
 ## Paper list 
 
--Class-wise Balancing Data Replay for Federated Class-Incremental Learning
+- Class-wise Balancing Data Replay for Federated Class-Incremental Learning
 https://arxiv.org/pdf/2507.07712
 
 - Adaptive LoRA Experts Allocation and Selection for Federated Fine-Tuning
 https://arxiv.org/pdf/2509.15087
 
 
- -SafeSplit: A Novel Defense Against Client-Side Backdoor Attacks in Split Learning
+ - SafeSplit: A Novel Defense Against Client-Side Backdoor Attacks in Split Learning
 https://arxiv.org/pdf/2501.06650
 
 - Pick a paper from NeurIPs 25 and discuss its applicability with Professor Chen
