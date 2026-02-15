@@ -1,4 +1,3 @@
-from ctypes import cast
 from pathlib import Path
 from typing import cast
 
@@ -8,10 +7,12 @@ from nbconvert.preprocessors import (ClearMetadataPreprocessor,
 
 
 """Clear the metadata from all notebooks in subdirectories of the script."""
-def main(clear_out=False, clear_meta=True)-> None:
+def main(clear_out=True, clear_meta=True)-> None:
     exporter = NotebookExporter()
     exporter.register_preprocessor(ClearOutputPreprocessor(), enabled=clear_out)
-    exporter.register_preprocessor(ClearMetadataPreprocessor(), enabled=clear_meta)
+    clear_meta_preproc = ClearMetadataPreprocessor()
+    clear_meta_preproc.preserve_cell_metadata_mask = {"tags"}
+    exporter.register_preprocessor(clear_meta_preproc, enabled=clear_meta)
     own_path = Path(__file__)
 
     for path in own_path.parent.rglob('*.ipynb'):

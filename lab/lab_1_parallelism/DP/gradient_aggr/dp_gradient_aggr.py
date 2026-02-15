@@ -38,11 +38,12 @@ def worker(rank: int, world_size: int) -> None:
         # make the tokenizer
         tokenizer = SPTokenizer()
         # make the model
-        net = LLama(CausalLLama, tokenizer.vocab_size, dmodel=dmodel, num_heads=num_heads,
-                    device=device, n_layers=n_layers, ctx_size=seq_l, padding_idx=tokenizer.pad_id)
+        net = LLama(
+            CausalLLama, tokenizer.vocab_size, dmodel=dmodel, num_heads=num_heads,
+            device=device, n_layers=n_layers, ctx_size=seq_l, padding_idx=tokenizer.pad_id)
         # skip so we can have different things
-        ds = TinyStories(tokenizer, batch_size=batch_size,
-                         seq_l=seq_l, skip=rank*5000)
+        ds = TinyStories(
+            tokenizer, batch_size=batch_size, seq_l=seq_l, skip=rank*5000)
         # we can iterate the dataset with:
         iter_ds = iter(ds)
 

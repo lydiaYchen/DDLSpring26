@@ -4,6 +4,7 @@ version = "0.0.1"
 
 [tool.setuptools]
 packages = [
+    "homework_1",
     "lab_0_sgd",
     "lab_1_parallelism",
     "lab_2_hfl"

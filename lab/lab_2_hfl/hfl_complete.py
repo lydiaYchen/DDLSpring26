@@ -253,7 +253,7 @@ class GradientClient(Client):
 
 #
 
-class FedSgdGradientServer(DecentralizedServer):
+class FedSgdServer(DecentralizedServer):
     def __init__(
             self, lr: float,
             client_subsets: list[Subset], client_fraction: float, seed: int) -> None:
@@ -264,7 +264,7 @@ class FedSgdGradientServer(DecentralizedServer):
     def run(self, nr_rounds: int) -> RunResult:
         elapsed_time = 0.
         run_result = RunResult(
-            "FedSGDGradient", self.nr_clients, self.client_fraction, -1, 1, self.lr, self.seed)
+            "FedSGD", self.nr_clients, self.client_fraction, -1, 1, self.lr, self.seed)
 
         for nr_round in tqdm(range(nr_rounds), desc="Rounds", leave=False):
             setup_start_time = perf_counter()

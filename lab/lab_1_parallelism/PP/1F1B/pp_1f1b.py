@@ -41,18 +41,21 @@ def worker(rank: int, world_size: int) -> None:
         # make the model
         if rank == 0:
             tokenizer = SPTokenizer()
-            net = LLamaFirstStage(tokenizer.vocab_size, dmodel=dmodel, num_heads=num_heads,
-                                  device=device, n_layers=n_layers, ctx_size=seq_l)
+            net = LLamaFirstStage(
+                tokenizer.vocab_size, dmodel=dmodel, num_heads=num_heads,
+                device=device, n_layers=n_layers, ctx_size=seq_l)
             # no skip
             ds = TinyStories(tokenizer, batch_size=batch_size, seq_l=seq_l)
             iter_ds = iter(ds)
         elif rank == 1:
-            net = LLamaStage(dmodel=dmodel, num_heads=num_heads,
-                             device=device, n_layers=n_layers, ctx_size=seq_l)
+            net = LLamaStage(
+                dmodel=dmodel, num_heads=num_heads,
+                device=device, n_layers=n_layers, ctx_size=seq_l)
         elif rank == 2:
             tokenizer = SPTokenizer()
-            net = LLamaLastStage(tokenizer.vocab_size, dmodel=dmodel, num_heads=num_heads,
-                                 device=device, n_layers=n_layers, ctx_size=seq_l)
+            net = LLamaLastStage(
+                tokenizer.vocab_size, dmodel=dmodel, num_heads=num_heads,
+                device=device, n_layers=n_layers, ctx_size=seq_l)
             # no skip
             ds = TinyStories(tokenizer, batch_size=batch_size, seq_l=seq_l)
             iter_ds = iter(ds)
