@@ -1,6 +1,6 @@
-# get our models
 # get our dataset
 from simplellm.dataloaders import TinyStories
+# get our models
 from simplellm.llama import CausalLLama, LLama
 # our loss
 from simplellm.losses import causalLLMLoss
