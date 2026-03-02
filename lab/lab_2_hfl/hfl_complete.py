@@ -133,8 +133,10 @@ class RunResult:
 
         df = DataFrame({"Round": range(1, len(self.wall_time) + 1), **self_dict})
         df = df.rename(columns={"Lr": ETA})
+
         if skip_wtime:
             df = df.drop(columns=["Wall time"])
+
         return df
 
 #
@@ -149,7 +151,7 @@ class Client(ABC):
             client_data, batch_size=batch_size, shuffle=False, drop_last=False)
 
     @abstractmethod
-    def update(self, weights: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
+    def update(self, updates: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
         ...
 
 #
@@ -230,9 +232,9 @@ class GradientClient(Client):
     def __init__(self, client_data: Subset) -> None:
         super().__init__(client_data, len(client_data))
 
-    def update(self, weights: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
+    def update(self, updates: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
         with torch.no_grad():
-            for client_values, server_values in zip(self.model.parameters(), weights):
+            for client_values, server_values in zip(self.model.parameters(), updates):
                 client_values[:] = server_values
                 client_values.grad = None
 
@@ -240,7 +242,7 @@ class GradientClient(Client):
         torch.manual_seed(seed)
         self.model.train()
 
-        # this will always have one iteratioon
+        # this will always have one iteration
         for data, target in self.loader_train:
             data, target = data.to(device), target.to(device)
             output = self.model(data)
@@ -315,9 +317,9 @@ class WeightClient(Client):
         self.optimizer = SGD(params=self.model.parameters(), lr=lr)
         self.nr_epochs = nr_epochs
 
-    def update(self, weights: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
+    def update(self, updates: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
         with torch.no_grad():
-            for client_values, server_values in zip(self.model.parameters(), weights):
+            for client_values, server_values in zip(self.model.parameters(), updates):
                 client_values[:] = server_values
 
         torch.manual_seed(seed)
