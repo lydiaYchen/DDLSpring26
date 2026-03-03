@@ -151,7 +151,7 @@ class Client(ABC):
             client_data, batch_size=batch_size, shuffle=False, drop_last=False)
 
     @abstractmethod
-    def update(self, updates: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
+    def update(self, in_params: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
         ...
 
 #
@@ -232,9 +232,9 @@ class GradientClient(Client):
     def __init__(self, client_data: Subset) -> None:
         super().__init__(client_data, len(client_data))
 
-    def update(self, updates: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
+    def update(self, in_params: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
         with torch.no_grad():
-            for client_values, server_values in zip(self.model.parameters(), updates):
+            for client_values, server_values in zip(self.model.parameters(), in_params):
                 client_values[:] = server_values
                 client_values.grad = None
 
@@ -317,9 +317,9 @@ class WeightClient(Client):
         self.optimizer = SGD(params=self.model.parameters(), lr=lr)
         self.nr_epochs = nr_epochs
 
-    def update(self, updates: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
+    def update(self, in_params: list[torch.Tensor], seed: int) -> list[torch.Tensor]:
         with torch.no_grad():
-            for client_values, server_values in zip(self.model.parameters(), updates):
+            for client_values, server_values in zip(self.model.parameters(), in_params):
                 client_values[:] = server_values
 
         torch.manual_seed(seed)
