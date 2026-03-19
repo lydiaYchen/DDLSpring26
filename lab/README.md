@@ -9,3 +9,5 @@ Before working on any lab task, please follow the following steps to get up and 
 - From the root directory of this repository, execute `python3 -m venv lab/.venv`.
 - Open the repository in VS Code, and [create a new terminal](https://code.visualstudio.com/docs/terminal/basics) (checking that current line starts with `(.venv)` to signal the correct Python environment got activated).
 - Move to the `lab` directory and execute `pip install -r requirements.txt` in the terminal.
+
+**❗ To ensure you have the latest version of the lab content and required dependencies, we recommend pulling the repository contents and rerunning the `pip install` command before working on a new lab/homework.**

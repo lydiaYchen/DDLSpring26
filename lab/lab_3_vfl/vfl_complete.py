@@ -218,7 +218,7 @@ class VflClient:
         self.model = BottomModel(input_dim, output_dim).to(DEVICE)
         self.client_data = client_data
         self.optimizer = AdamW(params=self.model.parameters(), lr=lr)
-        self.output = torch.empty(0)
+        self.output: torch.Tensor
 
     def forward_pass(self, inds: torch.Tensor) -> torch.Tensor:
         self.model.train()

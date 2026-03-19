@@ -81,7 +81,7 @@ For the final step, teams must submit a written report and give a 20-minute pres
 | Week 3 (Mar 3)   | Horizontal Federated Learning      | HFL              |                        |
 | Week 4 (Mar 10)  | Memory and Acceleration Technology | HW 1 Q&A         |                        |
 | Week 5 (Mar 17)  | Vertical Federated Learning        | VFL              | HW 1                   |
-| Week 6 (Mar 24)  | Federated Generative AI            | VGI              | Project Proposal       |
+| Week 6 (Mar 24)  | Federated Generative AI            | FedGenAI         | Project Proposal       |
 | Week 7 (Mar 31)  | Decentralized RL                   | Decentralized RL |                        |
 | Week 8: *Easter* | *No Lecture*                       | *No Lab*         |                        |
 | Week 9 (Apr 14)  | Robust Distributed Learning        | HW 2 Q&A         |                        |
