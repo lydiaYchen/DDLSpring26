@@ -82,9 +82,9 @@ def worker(rank: int, world_size: int) -> None:
                 tmp.append(param.view(-1))
                 param.grad = None
 
-            prev_grad = torch.cat(tmp).to("cpu")
-            dist.all_reduce(prev_grad, op=dist.ReduceOp.SUM)
-            tmp = torch.split(prev_grad, len_sizes)
+            prev_weight = torch.cat(tmp).to("cpu")
+            dist.all_reduce(prev_weight, op=dist.ReduceOp.SUM)
+            tmp = torch.split(prev_weight, len_sizes)
 
             with torch.no_grad():
                 for i, param in enumerate(net.parameters()):

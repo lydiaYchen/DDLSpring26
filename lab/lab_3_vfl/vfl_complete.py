@@ -83,8 +83,9 @@ def test_classifier(
 
 
 class VAE(nn.Module):
-    def __init__(self, input_dim: int, hidden_dim_1=16, hidden_dim_2=8, latent_dim=4):
-        # Encoder
+    def __init__(
+            self, input_dim: int, hidden_dim_1=16,
+            hidden_dim_2=8, latent_dim=4) -> None:
         super(VAE, self).__init__()
         self.latent_dim = latent_dim
         self.encoder = nn.Sequential(
@@ -109,20 +110,23 @@ class VAE(nn.Module):
             nn.Sigmoid()
         )
 
-    def encode(self, x):
+    def encode(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         h = self.encoder(x)
         return self.fc_mu(h), self.fc_logvar(h)
 
-    def reparameterize(self, mu, logvar):
+    def decode(self, z: torch.Tensor) -> torch.Tensor:
+        return self.decoder(z)
+
+    def reparameterize(
+            self, mu: torch.Tensor, logvar: torch.Tensor) -> torch.Tensor:
         std = (0.5 * logvar).exp()
         eps = torch.randn_like(std)
 
         return mu + eps * std
 
-    def decode(self, z):
-        return self.decoder(z)
-
-    def forward(self, x):
+    def forward(
+            self,
+            x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         mu, logvar = self.encode(x)
         z = self.reparameterize(mu, logvar)
 
@@ -177,13 +181,13 @@ def sample_vae(vae: VAE, nr_samples: int, seed=0) -> torch.Tensor:
 
 
 class BottomModel(nn.Module):
-    def __init__(self, input_dim, output_dim):
+    def __init__(self, input_dim: int, output_dim: int) -> None:
         super(BottomModel, self).__init__()
         self.fc1 = nn.Linear(input_dim, output_dim)
         self.fc2 = nn.Linear(output_dim, output_dim)
         self.dropout = nn.Dropout(0.1)
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
 
@@ -191,17 +195,17 @@ class BottomModel(nn.Module):
 
 
 class TopModel(nn.Module):
-    def __init__(self, input_dim: int):
+    def __init__(self, input_dim: int) -> None:
         super(TopModel, self).__init__()
         self.fc1 = nn.Linear(input_dim, 128)
         self.fc2 = nn.Linear(128, 256)
         self.fc3 = nn.Linear(256, 2)
         self.dropout = nn.Dropout(0.1)
 
-    def forward(self, x):
-        # concatenate local model outputs before forward pass
-        concat_outs = torch.cat(x, dim=1)
-        x = F.relu(self.fc1(concat_outs))
+    def forward(self, xs: list[torch.Tensor]) -> torch.Tensor:
+        # concatenate client outputs before forward pass
+        x = torch.cat(xs, dim=1)
+        x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = F.relu(self.fc3(x))
 
@@ -212,7 +216,7 @@ class VflClient:
     def __init__(
             self,  input_dim: int, output_dim: int,
             client_data: torch.Tensor,
-            lr: float, seed: int):
+            lr: float, seed: int) -> None:
         self.output_dim = output_dim
         torch.manual_seed(seed)
         self.model = BottomModel(input_dim, output_dim).to(DEVICE)
@@ -237,7 +241,7 @@ class VflServer:
     def __init__(
             self, clients: list[VflClient],
             labels: torch.Tensor,
-            lr: float, batch_size: int, seed: int):
+            lr: float, batch_size: int, seed: int) -> None:
         torch.manual_seed(seed)
         self.model = TopModel(sum(c.output_dim for c in clients)).to(DEVICE)
         self.clients = clients
@@ -249,30 +253,33 @@ class VflServer:
     def run(self, nr_epochs: int) -> None:
         for _epoch in trange(nr_epochs, desc="Epochs"):
             for inds_batch in self.inds_batches:
-                local_outs = [
+                c_outs = [
                     c.forward_pass(inds_batch).requires_grad_()
                     for c in self.clients
                 ]
-                output = self.model(local_outs)
+                self.optimizer.zero_grad()
+                output = self.model(c_outs)
                 loss = F.cross_entropy(output, self.labels[inds_batch])
                 loss.backward()
                 self.optimizer.step()
 
                 with torch.no_grad():
-                    for local_out, c in zip(local_outs, self.clients):
-                        c.backward_pass(cast(torch.Tensor, local_out.grad))
+                    for c, c_out in zip(self.clients, c_outs):
+                        c.backward_pass(cast(torch.Tensor, c_out.grad))
 
-    def test(self, X_test_chunks: tuple[torch.Tensor, ...], y_test_: torch.Tensor) -> float:
+    def test(
+            self, X_test_chunks: tuple[torch.Tensor, ...],
+            y_test_: torch.Tensor) -> float:
         self.model.eval()
 
         for c in self.clients:
             c.model.eval()
 
-        local_outs = [
+        c_outs = [
             c.model(X_test_chunk)
             for c, X_test_chunk in zip(self.clients, X_test_chunks)
         ]
-        output = self.model(local_outs)
+        output = self.model(c_outs)
         pred = torch.argmax(output, dim=1)
         test_acc = (y_test_ == pred).float().mean().item()
 
