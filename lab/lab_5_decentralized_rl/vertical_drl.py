@@ -66,13 +66,13 @@ def worker(rank: int, world_size: int, model_name: str) -> None:
             replay_buffer = []
             rollout_returns = []
             rollout_indv = []
-            questions, solutions, answers = data_interp(prompt_batch)
+            questions, _solutions, answers = data_interp(prompt_batch)
             generation_times = 0
             comm_times = 0
 
             with (torch.no_grad(), torch.autocast(device_type=device.type, dtype=torch.bfloat16)):
                 idx = -1
-                for q, s, a in zip(questions, solutions, answers):
+                for q, a in zip(questions, answers):
                     idx += 1
 
                     if idx % world_size != rank:

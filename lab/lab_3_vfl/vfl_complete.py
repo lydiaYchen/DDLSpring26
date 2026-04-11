@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import cast
 
 import pandas as pd
@@ -13,7 +14,7 @@ from tqdm import trange
 DEVICE = get_device()
 
 # read dataset
-df = pd.read_csv("heart.csv")
+df = pd.read_csv(Path(__file__).parent / "heart.csv")
 # encode categorical columns
 cat_cols = [c for c in df.columns if df[c].nunique() <= 5 and c != "target"]
 onehot_df = pd.get_dummies(df, columns=cat_cols)

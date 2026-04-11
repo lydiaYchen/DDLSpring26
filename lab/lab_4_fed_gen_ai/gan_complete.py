@@ -155,12 +155,12 @@ class GanFedAvgClient:
             ## Train with all-real batch
             self.discr.zero_grad()
             # format batch
-            real_cpu = data["images"].to(DEVICE)
-            b_size = real_cpu.size(0)
+            real = data["images"].to(DEVICE)
+            b_size = real.size(0)
             # apply label smoothing for better learning
             label = torch.empty(b_size, device=DEVICE).uniform_(0.9, 1.0)
             # forward pass real batch through D
-            output = self.discr(real_cpu).view(-1)
+            output = self.discr(real).view(-1)
             # calculate loss on all-real batch
             err_discr_real = self.criterion(output, label)
             # calculate gradients for D in backward pass
@@ -187,7 +187,8 @@ class GanFedAvgClient:
             # (2) Update G network: maximize log(D(G(z)))
             ###########################
             self.gen.zero_grad()
-            label.fill_(1.)  # fake labels are real for generator cost
+            # fake labels are real for generator cost
+            label.fill_(1.)
             # since we just updated D, perform another forward pass of all-fake batch through D
             output = self.discr(fake).view(-1)
             # calculate G's loss based on this output
