@@ -85,8 +85,8 @@ For the final step, teams must submit a written report and give a 20-minute pres
 | Week 7 (Mar 31)  | Decentralized RL                   | Decentralized RL |                        |
 | Week 8: *Easter* | *No Lecture*                       | *No Lab*         |                        |
 | Week 9 (Apr 14)  | Robust Distributed Learning        | HW 2 Q&A         |                        |
-| Week 10 (Apr 21) |   Attacks and Defenses II          | Training Attack |                        | 
-| Week 11 (Apr 28) |Project Midterm                     | Project Midterm |                    |                       
+| Week 10 (Apr 21) | Attacks and Defenses II            | Training Attack  | HW 2                   |
+| Week 11 (Apr 28) | Project Midterm                    | Project Midterm  |                        |
 | Week 12 (May 5)  | Attacks and Defenses II            | Inference Attack |                        |
 | Week 13 (May 12) | Privacy-Enhancing Technologies     | DP               |                        |
 | Week 14 (May 19) | Distributed Inference              | HW 3 Q&A         |                        |
