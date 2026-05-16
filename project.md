@@ -24,7 +24,7 @@ All the documents need to be submitted via the ILISAS. Exact due dates are on th
 ## Grading breakdown of the project
 
 - Final report: 65%
-- 20 min project presentation: 15 %
+- 15 min project presentation: 15 %
 - Individual contribution: 20%
 
 
@@ -54,7 +54,7 @@ The final project report is graded in combination with the project interview. Th
 
 ### Interviews
 
-The 20 minute interviews per group will be scheduled on the last lecture.
+The 15 minute interviews per group will be scheduled on the last lecture.
 
 
 ## Paper list 
